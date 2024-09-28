@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+      .calculator{
+        background-color: black;
+        margin-left: 400px;
+        border-radius: 50px;
+        align-items: center;
+        width:500px;
+        height: 600px;
+      }  
+      .btn{
+        height: 55px;
+        width: 75px;
+        margin-top: 30px;
+        margin-left: 35px;
+        border-radius: 45px;
+        color: rgb(245, 243, 240);
+        background-color: #333131;
+        font-size: large;
+      }
+      .equal{
+        width: 180px;
+        height: 55px;
+        border-radius: 45px;
+        margin-top: 30px;
+        margin-left: 35px;
+        border-radius: 45px;
+        background-color: orangered;
+        color: white;
+        font-size: larger;
+      }
+      #clear,#backspace{
+        color: orangered;
+      }
+      .row{
+        align-items: center;
+      }
+      #screen{
+        width:90%;
+        margin-top: 20px;
+        margin-left: 25px;
+        height: 120px;
+        background: rgb(245, 216, 178);
+        border-radius: 45px;
+        font-size: 50px;
+        text-align: right;
+        color: rgb(32, 32, 31);
+      }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="calculator">
+            <input type="text" id="screen" readonly>
+            <div class="button">
+                <div class="row">
+                    <button onclick="cleardisplay()" class="btn" id="clear">AC</button>
+                    <button onclick="clearlast()" class="btn" id="backspace">&larr;</button>
+                    <button onclick="buttonclick('/')" class="btn">/</button>
+                    <button onclick="buttonclick('*')" class="btn">x</button>
+
+
+                </div>
+                <div class="row">
+                    <button onclick="buttonclick(7)" class="btn">7</button>
+                    <button onclick="buttonclick(8)" class="btn">8</button>
+                    <button onclick="buttonclick(9)" class="btn">9</button>
+                    <button onclick="buttonclick('-')" class="btn">-</button>
+
+                </div>
+                <div class="row">
+                    <button onclick="buttonclick(4)" class="btn">4</button>
+                    <button onclick="buttonclick(5)" class="btn">5</button>
+                    <button onclick="buttonclick(6)" class="btn">6</button>
+                    <button onclick="buttonclick('+')" class="btn">+</button>
+
+                </div>
+                <div class="row">
+                    <button onclick="buttonclick(1)" class="btn">1</button>
+                    <button onclick="buttonclick(2)" class="btn">2</button>
+                    <button onclick="buttonclick(3)" class="btn">3</button>
+                    <button onclick="buttonclick('.')" class="btn">.</button>
+
+                </div>
+                <div class="row">
+                    <button onclick="buttonclick('00')" class="btn">00</button>
+                    <button onclick="buttonclick(0)" class="btn">0</button>
+                    <button onclick="equalclick()" class="equal">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
